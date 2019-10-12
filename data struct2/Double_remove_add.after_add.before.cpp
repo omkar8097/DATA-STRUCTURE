@@ -92,6 +92,8 @@ public:
 				{
 					p->prev = nullptr;
 					p->next = nullptr;
+                                        head=nullptr;
+                                        tail=nullptr;
 					delete p;
 					return 1;
 				}
