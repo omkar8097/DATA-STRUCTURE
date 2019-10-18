@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <conio.h>
+
+#define r 3
+
+
+
+int main() 
+{ 
+
+	int *ap[r];
+	int size,i,j;
+	int ss[r];
+	for (i = 0; i <  r; i++) 
+	{
+		scanf("%d", &size);
+		ss[i]=size;
+		ap[i]=(int *)malloc( size *sizeof(int));
+		for (j = 0; j < size; j++)
+		{
+			scanf("%d", &ap[i][j]);
+		}
+	}
+	for (i = 0; i <  r; i++) 
+	{
+
+		for (j = 0; j < ss[i]; j++) 
+		{
+			printf("|%d\t", ap[i][j]); 
+		}
+		printf("\n");
+	}
+	for(i=0; i<r; i++)
+	{
+		free(ap[i]);
+	}
+	getch();
+	return 0; 
+} 

@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#define r 5
+#define c 3
+
+int main() 
+{ 
+    
+    int arr[r][c];
+    int i, j; 
+    for (i = 0; i <  r; i++) 
+	{
+      for (j = 0; j < c; j++)
+	  {
+        scanf("%d", &arr[i][j]);
+	  }
+	}
+	for (i = 0; i <  r; i++) 
+	{
+      for (j = 0; j < c; j++) 
+         {
+			 printf("|%d\t", arr[i][j]); 
+	     }
+	  printf("\n");
+	}
+
+	getch();
+   return 0; 
+} 

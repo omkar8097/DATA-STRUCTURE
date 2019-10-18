@@ -1,0 +1,66 @@
+#include <iostream>
+#include <array>
+using namespace std;
+
+int main()
+{
+	array<int, 10> a; 
+
+	for(int i=0 ; i<a.size() ; i++)
+	{
+		cin>>a[i];
+	}
+
+	for(auto i:a )
+	{
+		cout<<i<<endl;
+	}
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	vector<int> v;
+	int num;
+	while(cout<<"enter a number",
+		cin>>num,
+		num)
+	{
+		v.push_back(num);
+	}
+
+	for(auto i:v )
+	{
+		cout<<i<<endl;
+	}
+	return 0;
+}
+
+
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main()
+{
+
+    list<int> list1; 
+
+    list1.assign(4,2); 
+	list1.push_back(4);
+	list1.push_front(1);
+
+    cout << "The list after inserting multiple elements is : "; 
+    for (list<int>::iterator i=list1.begin(); i!=list1.end(); i++) 
+       cout << *i << " "; 
+      
+    cout << endl; 
+      
+    
+      return 0;
+}
+
+

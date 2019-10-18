@@ -1,0 +1,23 @@
+#include <iostream>
+#include <map>
+using namespace std;
+int main()
+{
+	map<int,int> m;
+	int key;
+	while(cout<<"enter key(0 to stop): ",
+		cin>>key,
+		key)
+	{
+		int value;
+		cout<<"enter value for this key: ";
+		cin>>value;
+		m.insert(pair<int,int>(key,value)); 
+	}
+	for(auto p:m)         
+	{
+		cout<<p.first<<":"<<p.second<<"\t";
+	}
+	cout<<endl;	
+	return 0;
+}

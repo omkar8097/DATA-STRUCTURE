@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	vector <int> v;
+	int value;
+	while(cout<<"enter value(0 to stop): ",cin>>value,value)
+		v.push_back(value);
+
+	for(auto it=v.begin();it!=v.end();it++)
+		cout<<*it<<"\t";
+	cout<<endl;
+	
+	auto location=find(v.begin(),v.end(),5);
+	v.insert(location,55);
+
+	for(auto it=v.begin();it!=v.end();it++)
+		cout<<*it<<"\t";
+	cout<<endl;
+	return 0;
+}

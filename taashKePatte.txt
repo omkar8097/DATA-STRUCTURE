@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int num,temp,s,i,j,l;
+    vector <int> v; //5 1 2 7 9
+
+	while(cout<< "enter a number to insert in array :",
+		cin>>num,
+		num)
+	{
+		v.push_back(num);
+	}
+
+	s=v.size();
+
+	for(i=0 ; i<s-1 ; i++)
+	{
+		for(j=i+1; j<=s-1; j++)
+		{
+			if(v[i]>v[j])
+			{
+				
+				temp=v[j];
+				for(l=j;l>i;l--)
+				{
+					v[l]=v[l-1];
+				}
+				v[i]=temp;
+			}
+		}
+	}
+	for(auto i:v )
+	{
+		cout<<i<<endl;
+	}
+}

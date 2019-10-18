@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <conio.h>
+
+#define c 3
+
+
+
+int main() 
+{ 
+    
+    int (*pa)[c];
+    int size,i,j;
+	scanf("%d", &size);
+	pa=(int(*)[c])malloc( size *sizeof(int [c]));
+    for (i = 0; i <  size; i++) 
+	{
+      for (j = 0; j < c; j++)
+	  {
+        scanf("%d", &pa[i][j]);
+	  }
+	}
+	for (i = 0; i <  size; i++) 
+	{
+      for (j = 0; j < c; j++) 
+         {
+			 printf("|%d\t", pa[i][j]); 
+	     }
+	  printf("\n");
+	}
+        free(pa);
+	getch();
+   return 0; 
+} 
